@@ -46,7 +46,9 @@
             "description" : "Fictive website for managing a performance venue for administrators and clients with management of the venue's programming calendar, event details, online booking with Symfony, API Platform and VueJS.",
             "technos": ["Symfony", "API Platform", "VueJS"],
             "images": [
-                
+                "audito_home.PNG",
+                "audito_event.PNG",
+                "audito_programmation.PNG"
             ]
         },
         "portfolio":
