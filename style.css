@@ -410,6 +410,10 @@ section{
   transform: translateX(-50%);
 }
 
+.timeline.container {
+	overflow-x: hidden;
+} 
+
 .timeline-item {
   width: 100%;
   margin-bottom: 50px;

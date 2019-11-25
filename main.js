@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	let cardsProjects = document.querySelectorAll(".card");
 	
 	///// CALLS /////
-	
+	AOS.init();
 	displayModalProjects();
 	slideWithMouse();
 
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					let modal = createModal(id);
 					modal.open();
 					Glider(document.querySelector(".glider")).refresh();
+					modal.checkOverflow();
 				}
 			});
 		}
@@ -87,6 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				]
 			});	
 		}
+
+		modal.checkOverflow();
+
 				 
 		return modal;
 	}
