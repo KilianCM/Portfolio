@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	function displayModalProjects(){
 		for (let i = 0; i < cardsProjects.length; ++i) {
-			cardsProjects[i].addEventListener('click',function(){
+			cardsProjects[i].addEventListener('click',function(e){
+				e.preventDefault(); 
 				let id = cardsProjects[i].getAttribute('id');
 				if(projectsData[id] != null && typeof projectsData[id] != undefined){
 					let modal = createModal(id);
