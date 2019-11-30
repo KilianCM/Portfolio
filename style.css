@@ -398,6 +398,7 @@ section{
 .timeline {
   position: relative;
   margin-top: 5vh;
+  overflow-x: hidden;
 }
 .timeline::before {
   content: '';
@@ -418,6 +419,7 @@ section{
   width: 100%;
   margin-bottom: 50px;
 }
+
 .timeline-item:nth-child(even) .timeline-content {
   float: right;
   padding: 40px 30px 10px 30px;
