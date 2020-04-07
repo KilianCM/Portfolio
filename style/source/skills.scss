@@ -1,4 +1,13 @@
 #skills-section {
+    overflow-x: hidden;
+
+    #illustration {
+        position: absolute;
+        left: 60%;
+        z-index: -10;
+        top: -9%;
+    }
+
     .container{
         display: flex;
         justify-content: space-between;
@@ -10,30 +19,41 @@
 
         .left, .right{
             width: 90%;
+            .skills-title{
+                text-align: center;
+            }
+
+            .list {
+                display: flex;
+                flex-wrap:  wrap;
+                align-content: stretch;
+            }
         }
     }
 }
 
-.skills-title{
+.skill {
     text-align: center;
-}
-
-.skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 10px;
     color: white;
     border-radius: 10px;
-    margin-top: 15px;
+    flex-grow: 2;
+    margin: 5px;
     font-size: 1.1rem;
     font-weight: bold;
     box-shadow: 0 3px 9px rgba(0,0,0,0.12);
-    background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
+    background-image: $gradient-right;
 }
 
-.fr {width: 100%; background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);}
-.en, .it {width: 70%; background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);}
+
+//.fr {width: 100%; background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);}
+//.en, .it {width: 70%; background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);}
+
+@media(max-width: 900px) {
+    #skills-section #illustration {
+        left: 40%;
+    }
+}
 
 @media(max-width: 720px){
     #skills-section .container{

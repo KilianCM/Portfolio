@@ -75,7 +75,7 @@ section .subtitle {
 }
 
 #menu li a:hover {
-  color: #52E0C0;
+  color: #52e0c0;
 }
 
 #clip-section {
@@ -120,7 +120,7 @@ section .subtitle {
   transition: all ease 0.2s;
 }
 .icon:hover {
-  color: #52E0C0;
+  color: #52e0c0;
 }
 
 #social-networks {
@@ -263,7 +263,7 @@ section .subtitle {
 }
 
 #portfolio {
-  background: url("../images/KCM_logo.png");
+  background: url("../images/KCM-logo.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -347,6 +347,15 @@ section .subtitle {
   background-color: #005bea !important;
 }
 
+#skills-section {
+  overflow-x: hidden;
+}
+#skills-section #illustration {
+  position: absolute;
+  left: 60%;
+  z-index: -10;
+  top: -9%;
+}
 #skills-section .container {
   display: flex;
   justify-content: space-between;
@@ -358,35 +367,33 @@ section .subtitle {
 #skills-section .container .left, #skills-section .container .right {
   width: 90%;
 }
-
-.skills-title {
+#skills-section .container .left .skills-title, #skills-section .container .right .skills-title {
   text-align: center;
 }
-
-.skills {
+#skills-section .container .left .list, #skills-section .container .right .list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.skill {
+  text-align: center;
   padding: 10px;
   color: white;
   border-radius: 10px;
-  margin-top: 15px;
+  flex-grow: 2;
+  margin: 5px;
   font-size: 1.1rem;
   font-weight: bold;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
   background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
 }
 
-.fr {
-  width: 100%;
-  background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
+@media (max-width: 900px) {
+  #skills-section #illustration {
+    left: 40%;
+  }
 }
-
-.en, .it {
-  width: 70%;
-  background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
-}
-
 @media (max-width: 720px) {
   #skills-section .container {
     flex-direction: column;

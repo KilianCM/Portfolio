@@ -34,7 +34,7 @@
         &:nth-child(even) .timeline-content .date {
             right: auto;
             left: 0;
-            background-image: linear-gradient(to left, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);;
+            background-image: $gradient-left;
         }
 
         &:nth-child(even) .timeline-content::after {
@@ -114,7 +114,7 @@
 }
 
 .date {
-    background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);;
+    background-image: $gradient-right;
     display: inline-block;
     color: #FFFFFF;
     padding: 10px;
