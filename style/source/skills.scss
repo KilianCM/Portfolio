@@ -52,12 +52,19 @@
 @media(max-width: 900px) {
     #skills-section #illustration {
         left: 40%;
+        top: -5%;
     }
 }
 
 @media(max-width: 720px){
     #skills-section .container{
         flex-direction: column;
+        align-items: center;
+
+        .left {
+            margin-right: unset;
+        }
+
         .right{
             margin-top: 20px;
         }
@@ -65,9 +72,16 @@
 }
 
 @media(max-width: 552px){
-    #skills-section .container {
-        .right, .left{
-            width: 85%;
+    #skills-section {
+        .container {
+            .right, .left{
+                width: 85%;
+            }
+        }
+
+        #illustration {
+            left: 28%;
+            top: -4%;
         }
     }
 }
