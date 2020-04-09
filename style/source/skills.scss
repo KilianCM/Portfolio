@@ -1,4 +1,4 @@
-#skills-section {
+#skills {
     overflow-x: hidden;
 
     #illustration {
@@ -50,14 +50,14 @@
 //.en, .it {width: 70%; background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);}
 
 @media(max-width: 900px) {
-    #skills-section #illustration {
+    #skills #illustration {
         left: 40%;
         top: -5%;
     }
 }
 
 @media(max-width: 720px){
-    #skills-section .container{
+    #skills .container{
         flex-direction: column;
         align-items: center;
 
@@ -72,7 +72,7 @@
 }
 
 @media(max-width: 552px){
-    #skills-section {
+    #skills {
         .container {
             .right, .left{
                 width: 85%;

@@ -89,6 +89,7 @@ section .subtitle {
 }
 #clip-section #title {
   font-size: 12rem;
+  font-weight: bold;
   /*background: url("clip_bg.jpg");*/
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
   background-position: -150px;
@@ -283,6 +284,27 @@ section .subtitle {
   background-position: center;
 }
 
+#movies {
+  background: url("../images/movies-explorer/logo.png");
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#spaceup {
+  background: url("../images/spaceup/logo.png");
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#hulahop {
+  background: url("../images/hulahop/logo.png");
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .modal h1 {
   text-align: center;
   color: #005bea;
@@ -347,30 +369,30 @@ section .subtitle {
   background-color: #005bea !important;
 }
 
-#skills-section {
+#skills {
   overflow-x: hidden;
 }
-#skills-section #illustration {
+#skills #illustration {
   position: absolute;
   left: 60%;
   z-index: -10;
   top: -9%;
 }
-#skills-section .container {
+#skills .container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-#skills-section .container .left {
+#skills .container .left {
   margin-right: 5vw;
 }
-#skills-section .container .left, #skills-section .container .right {
+#skills .container .left, #skills .container .right {
   width: 90%;
 }
-#skills-section .container .left .skills-title, #skills-section .container .right .skills-title {
+#skills .container .left .skills-title, #skills .container .right .skills-title {
   text-align: center;
 }
-#skills-section .container .left .list, #skills-section .container .right .list {
+#skills .container .left .list, #skills .container .right .list {
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
@@ -390,28 +412,28 @@ section .subtitle {
 }
 
 @media (max-width: 900px) {
-  #skills-section #illustration {
+  #skills #illustration {
     left: 40%;
     top: -5%;
   }
 }
 @media (max-width: 720px) {
-  #skills-section .container {
+  #skills .container {
     flex-direction: column;
     align-items: center;
   }
-  #skills-section .container .left {
+  #skills .container .left {
     margin-right: unset;
   }
-  #skills-section .container .right {
+  #skills .container .right {
     margin-top: 20px;
   }
 }
 @media (max-width: 552px) {
-  #skills-section .container .right, #skills-section .container .left {
+  #skills .container .right, #skills .container .left {
     width: 85%;
   }
-  #skills-section #illustration {
+  #skills #illustration {
     left: 28%;
     top: -4%;
   }
@@ -561,9 +583,30 @@ section .subtitle {
     margin-top: 20px;
   }
 }
+#studies {
+  overflow: hidden;
+}
+#studies #illustration2 {
+  position: absolute;
+  z-index: -10;
+  transform: rotate(-65deg);
+  left: 65%;
+  bottom: 17%;
+}
+
+@media (max-width: 900px) {
+  #studies #illustration2 {
+    left: 55%;
+  }
+}
+@media (max-width: 600px) {
+  #studies #illustration2 {
+    left: 40%;
+  }
+}
 footer {
   background-color: #F4F4F4;
-  height: 10vh;
+  height: 80px;
   color: #7c7c7c;
   display: flex;
   flex-direction: column;
@@ -571,6 +614,25 @@ footer {
   align-items: center;
   text-align: center;
   padding: 10px;
+}
+footer #resume-link {
+  background-color: #025be9;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: -30px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
+  transition: all ease-in-out 0.2s;
+}
+footer #resume-link:hover {
+  background-color: white;
+  cursor: pointer;
+}
+footer #resume-link:hover a {
+  color: #025be9;
+}
+footer #resume-link a {
+  color: white;
 }
 
 .credits {

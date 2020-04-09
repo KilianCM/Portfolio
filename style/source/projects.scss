@@ -80,8 +80,29 @@
 }
 
 #ta{
-    background: url("../images/ta/logo.png");
-    background-size: 100%;
+     background: url("../images/ta/logo.png");
+     background-size: 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+#movies{
+    background: url("../images/movies-explorer/logo.png");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#spaceup{
+    background: url("../images/spaceup/logo.png");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hulahop{
+    background: url("../images/hulahop/logo.png");
+    background-size: 125%;
     background-repeat: no-repeat;
     background-position: center;
 }
