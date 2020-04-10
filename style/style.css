@@ -27,7 +27,7 @@ a {
 }
 
 .discret-links {
-  color: #7c7c7c;
+  color: #7F7F7F;
   transition: all ease-in-out 0.2s;
 }
 .discret-links:hover {
@@ -56,7 +56,7 @@ section .title::before {
 section .subtitle {
   font-size: 1rem;
   font-weight: normal;
-  color: #7c7c7c;
+  color: #7F7F7F;
 }
 
 #menu {
@@ -340,7 +340,6 @@ section .subtitle {
   font-style: italic;
 }
 #project-details #project-description {
-  text-align: justify;
   color: #7F7F7F;
   margin-top: 15px;
 }
@@ -349,9 +348,19 @@ section .subtitle {
   justify-content: space-around;
   align-items: center;
 }
+#project-details #technos::after, #project-details #technos::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #52e0c0;
+}
 #project-details ul#technos-list {
   list-style: none;
   display: flex;
+}
+#project-details ul#technos-list:first-child {
+  margin-left: 15px;
 }
 #project-details ul#technos-list li {
   /*background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
@@ -365,10 +374,15 @@ section .subtitle {
 #project-details ul#technos-list li:nth-child(even) {
   background-color: #005bea;
 }
+#project-details #images #images-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 #project-details #images #images-list img {
   object-fit: cover;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
   margin: 10px;
@@ -379,6 +393,16 @@ section .subtitle {
   cursor: pointer;
 }
 
+@media (max-width: 560px) {
+  #project-details {
+    margin: 20px 30px;
+  }
+
+  #images #images-list img {
+    width: 110px;
+    height: 110px;
+  }
+}
 #skills {
   overflow-x: hidden;
 }
@@ -534,7 +558,7 @@ section .subtitle {
   margin-bottom: 8px;
 }
 .timeline-content h3 {
-  color: #7c7c7c;
+  color: #7F7F7F;
   font-size: 1rem;
   font-weight: normal;
   padding: 5px 2px 5px 0px;
@@ -617,7 +641,7 @@ section .subtitle {
 footer {
   background-color: #F4F4F4;
   height: 80px;
-  color: #7c7c7c;
+  color: #7F7F7F;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

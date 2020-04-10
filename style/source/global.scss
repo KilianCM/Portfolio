@@ -28,7 +28,7 @@ a{
 }
 
 .discret-links{
-  color:#7c7c7c;
+  color: $grey-color;
   transition: all ease-in-out 0.2s;
 
   &:hover{
@@ -60,6 +60,6 @@ section{
   .subtitle{
     font-size: 1rem;
     font-weight: normal;
-    color:#7c7c7c;
+    color:$grey-color;
   }
 }
