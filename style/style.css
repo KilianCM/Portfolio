@@ -358,9 +358,9 @@ section .subtitle {
 #project-details ul#technos-list {
   list-style: none;
   display: flex;
-}
-#project-details ul#technos-list:first-child {
-  margin-left: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 15px;
 }
 #project-details ul#technos-list li {
   /*background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
@@ -369,7 +369,7 @@ section .subtitle {
   padding: 10px;
   color: white;
   border-radius: 5px;
-  margin: 15px 15px 15px 0px;
+  margin: 5px;
 }
 #project-details ul#technos-list li:nth-child(even) {
   background-color: #005bea;
@@ -401,6 +401,10 @@ section .subtitle {
   #images #images-list img {
     width: 110px;
     height: 110px;
+  }
+
+  #technos::after, #technos::before {
+    width: 60px !important;
   }
 }
 #skills {

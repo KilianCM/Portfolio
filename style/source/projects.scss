@@ -172,10 +172,9 @@
     ul#technos-list {
         list-style: none;
         display: flex;
-
-        &:first-child {
-            margin-left: 15px;
-        }
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 15px 15px;
 
         li {
             /*background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
@@ -184,7 +183,7 @@
             padding: 10px;
             color: white;
             border-radius: 5px;
-            margin: 15px 15px 15px 0px;
+            margin: 5px;
 
             &:nth-child(even) {
                 background-color: #005bea;
@@ -229,5 +228,12 @@
             }
         }
     }
+
+    #technos {
+        &::after, &::before {
+            width: 60px !important;
+        }
+    }
 }
+
 
