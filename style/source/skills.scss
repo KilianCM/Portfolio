@@ -41,7 +41,7 @@
     margin: 5px;
     font-size: 1.1rem;
     font-weight: bold;
-    box-shadow: 0 3px 9px rgba(0,0,0,0.12);
+    box-shadow: $box-shadow;
     background-image: $gradient-right;
 }
 

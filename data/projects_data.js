@@ -49,7 +49,7 @@ let projectsData = {
     "portfolio": {
         "name": "My portfolio",
         "subname": "The website you are visiting now",
-        "description": "This website has been released from scratch with HTML/CSS and native JavaScript. It presents my school career, my IT skills, my professional experiences and my school realisations but also my personal projects. I used <a href='http://robinparisi.github.io/tingle/'>TingleJS</a> to make beautiful modal windows and <a href='https://nickpiscitelli.github.io/Glider.js/'>Glider.js</a> to display correctly images of my projects.",
+        "description": "This website has been released from scratch with HTML/CSS and native JavaScript. It presents my school career, my IT skills, my professional experiences and my school realisations but also my personal projects. I used <a class='discret-links' href='http://robinparisi.github.io/tingle/'>TingleJS</a> to make beautiful modal windows and <a class='discret-links' href='https://nickpiscitelli.github.io/Glider.js/'>Glider.js</a> to display correctly images of my projects.",
         "technos": ["HTML", "CSS", "JS"],
         "images": []
     },

@@ -201,6 +201,15 @@ section .subtitle {
 #projects {
   padding: 5vh 0 5vh 0;
 }
+#projects #project-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.4s ease;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+}
 
 #projects .subtitle, #projects .title {
   margin-left: 5vw;
@@ -232,8 +241,10 @@ section .subtitle {
   cursor: pointer;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
-
-.first-card {
+.card.selected {
+  box-shadow: 0 6px 15px #52e0c0;
+}
+.card.first-card {
   margin-left: 5vw;
 }
 
@@ -312,31 +323,37 @@ section .subtitle {
   background-position: center;
 }
 
-.modal h1 {
-  text-align: center;
-  color: #005bea;
+#project-details {
+  max-width: 1000px;
+  margin: 20px 60px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
 }
-.modal h3 {
-  text-align: center;
+#project-details #project-name {
+  color: #025be9;
+}
+#project-details #project-subname {
   font-style: italic;
 }
-.modal p {
+#project-details #project-description {
   text-align: justify;
   color: #7F7F7F;
   margin-top: 15px;
 }
-.modal p a {
-  color: #7F7F7F;
-  transition: all ease-in-out 0.2s;
+#project-details #technos, #project-details #images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.modal p a:hover {
-  color: #005bea;
-}
-.modal ul.technosList {
+#project-details ul#technos-list {
   list-style: none;
   display: flex;
 }
-.modal ul.technosList li {
+#project-details ul#technos-list li {
   /*background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
     */
   background-color: #005bea;
@@ -345,35 +362,21 @@ section .subtitle {
   border-radius: 5px;
   margin: 15px 15px 15px 0px;
 }
-.modal ul.technosList li:nth-child(even) {
+#project-details ul#technos-list li:nth-child(even) {
   background-color: #005bea;
 }
-
-.modal .technos {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+#project-details #images #images-list img {
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.4s ease;
 }
-
-.tingle-modal__closeIcon {
-  font-size: 3rem !important;
-}
-
-.tingle-modal__closeLabel {
-  font-size: 1rem !important;
-}
-
-.glider div img {
-  max-height: 450px;
-}
-
-.glider-next:hover,
-.glider-prev:hover {
-  color: #005bea !important;
-}
-
-.glider-dot:hover, .glider-dot:focus, .glider-dot.active {
-  background-color: #005bea !important;
+#project-details #images #images-list img:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 #skills {
@@ -625,7 +628,7 @@ footer {
 footer #resume-link {
   background-color: #025be9;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   position: relative;
   top: -30px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);

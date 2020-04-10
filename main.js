@@ -4,7 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	//
 	//projects
 	let cardsProjects = document.querySelectorAll(".card");
-	
+	let container = document.getElementById("project-container");
+	let details = document.getElementById("project-details");
+	let name = document.getElementById("project-name");
+	let subname = document.getElementById("project-subname");
+	let description = document.getElementById("project-description");
+	let technoList = document.getElementById("technos-list");
+	let imagesList = document.getElementById("images-list");
+
 	///// CALLS /////
 	AOS.init();
 	displayModalProjects();
@@ -16,83 +23,89 @@ document.addEventListener("DOMContentLoaded", function() {
 		for (let i = 0; i < cardsProjects.length; ++i) {
 			cardsProjects[i].addEventListener('click',function(e){
 				e.preventDefault(); 
-				let id = cardsProjects[i].getAttribute('id');
+				const id = cardsProjects[i].getAttribute('id');
 				if(projectsData[id] != null && typeof projectsData[id] != undefined){
-					let modal = createModal(id);
-					modal.open();
-					Glider(document.querySelector(".glider")).refresh();
-					modal.checkOverflow();
+					if(!cardsProjects[i].classList.contains("selected")) {
+						displayProjectDetails(id);
+						cardsProjects.forEach(card => {
+							card.classList.remove("selected");
+						});
+						cardsProjects[i].classList.add("selected");
+					} else {
+						cardsProjects[i].classList.remove("selected");
+						hideProjectDetails();
+					}
 				}
 			});
 		}
 	}
 
-	//Build modal with project information
-	function createModal(id){
-		let modal = new tingle.modal({
-		    closeMethods: ['overlay', 'button', 'escape'],
-		    closeLabel: "Close",
-		    cssClass: ['modal'],
-		    beforeClose: function() {
-				return true;
-		    }
+	function hideProjectDetails() {
+		container.style.opacity = 0;
+		technoList.innerHTML = null;
+		imagesList.innerHTML = null;
+		name.innerText = null;
+		subname.innerText = null;
+		description.innerHTML = null;
+		updateProjectContainer();
+	}
+
+	function displayProjectDetails(id) {
+		const project = projectsData[id];
+
+		technoList.innerHTML = null;
+		imagesList.innerHTML = null;
+
+		name.innerText = project.name;
+		subname.innerText = project.subname;
+		description.innerHTML = project.description;
+
+		project.technos.forEach(value => {
+			const li = document.createElement("li");
+			li.innerText = value;
+			technoList.appendChild(li);
 		});
-		let project = projectsData[id];
-		let divTechnos = "<div class='technos'><ul class='technosList'>";
-		for(let i=0; i<project.technos.length;i++){
-			divTechnos += "<li>" + project.technos[i] + "</li>";
-		}
-		divTechnos += "</ul></div>";
 
-		divGlider = "";
+		project.images.forEach(value => {
+			const a = document.createElement("a");
+			a.href = "images/" + value;
+			a.classList.add("img-lightbox-link");
+			a.rel = "lightbox";
+			a.setAttribute('aria-hidden', 'true');
+			const img = document.createElement("img");
+			img.src = "images/" + value;
+			a.appendChild(img);
+			imagesList.appendChild(a);
+		});
 
-		if(project.images.length > 0){
-			divGlider = `<div class="glider-contain">
-									<div class="glider">`;
-
-			for(let j=0;j<project.images.length;j++){
-				divGlider += "<div><img alt=\"" + project.name + "\" src=\"images/" + projectsData[id].images[j] +"\"></div>";
+		(function (root) {
+			"use strict";
+			if (root.imgLightbox) {
+				imgLightbox("img-lightbox-link", {
+					onCreated: function () {
+						/* show your preloader */
+					},
+					onLoaded: function () {
+						/* hide your preloader */
+					},
+					onError: function () {
+						/* hide your preloader */
+					},
+					onClosed: function () {
+						/* hide your preloader */
+					},
+					rate: 500 /* default: 500 */ ,
+					touch: false /* default: false - use with care for responsive images in links on vertical mobile screens */
+				});
 			}
+		})("undefined" !== typeof window ? window : this);
 
-			divGlider += `</div>
-									<button role="button" aria-label="Previous" class="glider-prev">«</button>
-									<button role="button" aria-label="Next" class="glider-next">»</button>
-									<div role="tablist" id="dots"></div>
-								</div>`;
-		}
-	
-		modal.setContent('<h1>'+ project.name + '</h1>' +
-						'<h3>'+ project.subname + '</h3>' +  
-						'<p>' + project.description + '</p>' +
-						divTechnos + divGlider
-						 );
-		
-		if(divGlider != ""){
-			new Glider(document.querySelector('.glider'), {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				dots: '#dots',
-				draggable: true,
-				arrows: {
-					prev: '.glider-prev',
-					next: '.glider-next'
-				},
-				responsive: [
-					{
-						breakpoint: 1000,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 1
-						}
-					}
-				]
-			});	
-		}
+		container.style.opacity = 1;
+		updateProjectContainer();
+	}
 
-		modal.checkOverflow();
-
-				 
-		return modal;
+	function updateProjectContainer() {
+		container.style.height = details.clientHeight + 'px';
 	}
 
 	function slideWithMouse(){
@@ -120,8 +133,4 @@ document.addEventListener("DOMContentLoaded", function() {
 			slider.scrollLeft = scrollLeft - walk;
 		});
 	}
-
-	 
-
-
 });
