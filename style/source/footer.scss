@@ -9,12 +9,20 @@ footer{
     text-align: center;
     padding: 10px;
 
+    .separator {
+        height: 1px;
+        width: 500px;
+        margin-top: -15px;
+        margin-bottom: 10px;
+        background-color: #e4e4e4!important;
+    }
+
     #resume-link {
         background-color: $primary-color;
         padding: 10px;
         border-radius: 8px;
         position: relative;
-        top: -30px;
+        top: -35px;
         box-shadow:  $box-shadow;
         transition: all ease-in-out 0.2s;
 
@@ -35,4 +43,12 @@ footer{
 
 .credits {
     font-size: 0.5em;
+}
+
+@media(max-width: 580px) {
+    footer {
+        .separator {
+            width: 300px;
+        }
+    }
 }

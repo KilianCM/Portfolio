@@ -342,6 +342,8 @@ section .subtitle {
 #project-details #project-description {
   color: #7F7F7F;
   margin-top: 15px;
+  max-width: 800px;
+  text-align: center;
 }
 #project-details #technos, #project-details #images {
   display: flex;
@@ -653,12 +655,19 @@ footer {
   text-align: center;
   padding: 10px;
 }
+footer .separator {
+  height: 1px;
+  width: 500px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  background-color: #e4e4e4 !important;
+}
 footer #resume-link {
   background-color: #025be9;
   padding: 10px;
   border-radius: 8px;
   position: relative;
-  top: -30px;
+  top: -35px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
   transition: all ease-in-out 0.2s;
 }
@@ -675,6 +684,12 @@ footer #resume-link a {
 
 .credits {
   font-size: 0.5em;
+}
+
+@media (max-width: 580px) {
+  footer .separator {
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
