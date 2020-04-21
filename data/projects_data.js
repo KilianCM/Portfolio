@@ -101,14 +101,25 @@ let projectsData = {
     "spaceup": {
         "name": "SpaceUP",
         "subname": "University project",
-        "description": "",
+        "description": "SpaceUP is our final year university project. It was designed for the " +
+            "<a class='discret-links' href='https://www.laturbine.fr/'>La Turbine</a> exhibition centre to provide an " +
+            "innovative and interactive experience during a visit.<br>" +
+            "Our project is linked to an exhibition on the conquest of space and offers different mini-workshops on a mobile " +
+            "application to learn more about this theme. The user can interact with a simplified model of a rocket engine, " +
+            "answer a questionnaire on a video explaining the failures of the conquest of space or try to get a rocket to take " +
+            "off in augmented reality. The application was developed on Unity using Vuforia for the AR part.",
         "technos": ["Unity", "C#"],
         "images": []
     },
     "hulahop": {
         "name": "HulaHop",
         "subname": "University project",
-        "description": "",
+        "description": "HulaHop is a website dedicated to board games. It represents a fictitious company that allows " +
+            "you to borrow board games and receive them directly at home. The user returns the game at the end of the " +
+            "borrowing period. He can also find players near his home on a card and add them as friends to play board games.<br>" +
+            "The project was done with Symfony and uses the <a class='discret-links' href='https://www.boardgameatlas.com/api/docs'>Board Game Atlas API</a>" +
+            " to list discounted games and <a class='discret-links' href='https://photon.komoot.de/'>Photon API</a> which " +
+            "can transform a postal address into GPS coordinates.",
         "technos": ["Symfony", "Twig", "Photon API", "BoardGamesAtlas API"],
         "images": []
     },
