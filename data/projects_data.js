@@ -119,9 +119,18 @@ let projectsData = {
             "borrowing period. He can also find players near his home on a card and add them as friends to play board games.<br>" +
             "The project was done with Symfony and uses the <a class='discret-links' href='https://www.boardgameatlas.com/api/docs'>Board Game Atlas API</a>" +
             " to list discounted games and <a class='discret-links' href='https://photon.komoot.de/'>Photon API</a> which " +
-            "can transform a postal address into GPS coordinates.",
+            "can transform a postal address into GPS coordinates.<br><br>" +
+            "Why \"HulaHop\" ?<br>" +
+            "Hula is the hawaian term for play. So we made a link between playing game and the famous toy HulaHoop with " +
+            "the term \"Hop\" which can be pronounced when you take a game: \"Hop I take this game!\".",
         "technos": ["Symfony", "Twig", "Photon API", "BoardGamesAtlas API"],
-        "images": []
+        "images": [
+            "hulahop/1.png",
+            "hulahop/2.png",
+            "hulahop/3.png",
+            "hulahop/4.png",
+            "hulahop/5.png"
+        ]
     },
     "wrcpredict": {
         "name": "WRC Predict",
