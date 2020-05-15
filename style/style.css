@@ -11,7 +11,15 @@ body, html {
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #fffffe;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #094067;
+}
+
+p {
+  color: #5f6c7b;
 }
 
 header {
@@ -23,7 +31,7 @@ header {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #5f6c7b;
 }
 
 .discret-links {
@@ -72,6 +80,7 @@ section .subtitle {
 
 #menu li a {
   transition: all ease 0.2s;
+  color: #094067;
 }
 
 #menu li a:hover {
@@ -91,7 +100,7 @@ section .subtitle {
   font-size: 12rem;
   font-weight: bold;
   /*background: url("clip_bg.jpg");*/
-  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  background-image: linear-gradient(to top, #00c6fb 0%, #025be9 100%);
   background-position: -150px;
   background-attachment: fixed;
   -webkit-background-clip: text;
@@ -119,6 +128,7 @@ section .subtitle {
   font-size: 40px;
   margin-right: 4vw;
   transition: all ease 0.2s;
+  color: #094067;
 }
 .icon:hover {
   color: #52e0c0;
@@ -340,7 +350,6 @@ section .subtitle {
   font-style: italic;
 }
 #project-details #project-description {
-  color: #7F7F7F;
   margin-top: 15px;
   max-width: 800px;
   text-align: center;
@@ -365,16 +374,14 @@ section .subtitle {
   margin: 15px 15px;
 }
 #project-details ul#technos-list li {
-  /*background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
-    */
-  background-color: #005bea;
+  background-image: linear-gradient(to left, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
   padding: 10px;
   color: white;
   border-radius: 5px;
   margin: 5px;
 }
 #project-details ul#technos-list li:nth-child(even) {
-  background-color: #005bea;
+  background-color: #025be9;
 }
 #project-details #images #images-list {
   display: flex;
@@ -441,7 +448,7 @@ section .subtitle {
 .skill {
   text-align: center;
   padding: 10px;
-  color: white;
+  color: #fffffe;
   border-radius: 10px;
   flex-grow: 2;
   margin: 5px;
@@ -573,7 +580,7 @@ section .subtitle {
 .timeline-img {
   width: 30px;
   height: 30px;
-  background: #005bea;
+  background: #025be9;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -584,7 +591,7 @@ section .subtitle {
 .date {
   background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
   display: inline-block;
-  color: #FFFFFF;
+  color: #fffffe;
   padding: 10px;
   position: absolute;
   border-radius: 15px;
@@ -647,7 +654,7 @@ section .subtitle {
 footer {
   background-color: #F4F4F4;
   height: 80px;
-  color: #7F7F7F;
+  color: #5f6c7b;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -679,7 +686,7 @@ footer #resume-link:hover a {
   color: #025be9;
 }
 footer #resume-link a {
-  color: white;
+  color: #fffffe;
 }
 
 .credits {

@@ -105,7 +105,7 @@
 .timeline-img {
     width: 30px;
     height: 30px;
-    background: #005bea;
+    background: $primary-color;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -116,7 +116,7 @@
 .date {
     background-image: $gradient-right;
     display: inline-block;
-    color: #FFFFFF;
+    color: $text-color-inverse;
     padding: 10px;
     position: absolute;
     border-radius: 15px;

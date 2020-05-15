@@ -11,7 +11,7 @@
     font-size: 12rem;
     font-weight: bold;
     /*background: url("clip_bg.jpg");*/
-    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    background-image: linear-gradient(to top, #00c6fb 0%, $primary-color 100%);
     background-position: -150px;
     background-attachment: fixed;
     -webkit-background-clip: text;
@@ -41,6 +41,7 @@
   font-size: 40px;
   margin-right:4vw;
   transition: all ease 0.2s;
+  color: $title-color;
 
   &:hover {
     color: $accent-color;

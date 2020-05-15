@@ -149,7 +149,6 @@
     }
 
     #project-description {
-        color: $grey-color;
         margin-top: 15px;
         max-width: 800px;
         text-align: center;
@@ -179,16 +178,14 @@
         margin: 15px 15px;
 
         li {
-            /*background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
-              */
-            background-color: #005bea;
+            background-image: $gradient-left;
             padding: 10px;
             color: white;
             border-radius: 5px;
             margin: 5px;
 
             &:nth-child(even) {
-                background-color: #005bea;
+                background-color: $primary-color;
             }
         }
     }
