@@ -1,0 +1,19 @@
+#menu {
+  list-style: none;
+  display: flex;
+  z-index: 2;
+  margin-left: 13px;
+}
+
+#menu li{
+  padding-right: 2vw;
+}
+
+#menu li a{
+  transition: all ease 0.2s;
+  color: $title-color;
+}
+
+#menu li a:hover{
+  color: $accent-color;
+}

@@ -1,0 +1,238 @@
+#projects {
+    padding: 5vh 0 5vh 0;
+
+    #project-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: $transition;
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+    }
+}
+
+#projects .subtitle, #projects .title {
+    margin-left: 5vw;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 240px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    transition: $transition;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: $box-shadow-hover;
+    }
+
+    &.selected {
+        box-shadow: 0 6px 15px $accent-color;
+    }
+
+    &.first-card {
+        margin-left: 5vw;
+    }
+}
+
+#last-card {
+    flex: 0 0 auto;
+    width: 5vw;
+    height: 300px;
+    background-color: transparent;
+}
+
+#geoquizz {
+    background: url("../images/geoquizz/logo.png");
+    background-size: 130%;
+    background-position: -30px;
+    background-repeat: no-repeat;
+}
+
+
+#mmf {
+    background: url("../images/mmf/logo.png");
+    background-size: 130%;
+    background-position: -30px;
+    background-repeat: no-repeat;
+}
+
+#audito {
+    background: url("../images/audito/logo.png");
+    background-size: cover;
+}
+
+#portfolio {
+    background: url("../images/KCM-logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tsd {
+    background: url("../images/tsd/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ta {
+    background: url("../images/ta/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#movies {
+    background: url("../images/movies-explorer/logo.png");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#spaceup {
+    background: url("../images/spaceup/logo.png");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hulahop {
+    background: url("../images/hulahop/logo.png");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#wrcpredict {
+    background: url("../images/wrcpredict/logo.png");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project-details {
+    max-width: 1000px;
+    margin: 20px 60px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: fit-content;
+
+    #project-name {
+        color: $primary-color;
+    }
+
+    #project-subname {
+        font-style: italic;
+    }
+
+    #project-description {
+        margin-top: 15px;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    #technos, #images {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #technos {
+        &::after, &::before {
+            content: '';
+            width: 100px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: $accent-color;
+        }
+    }
+
+    ul#technos-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 15px 15px;
+
+        li {
+            background-image: $gradient-left;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+
+            &:nth-child(even) {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    #images {
+        #images-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                object-fit: cover;
+                width: 130px;
+                height: 130px;
+                box-shadow: $box-shadow;
+                border-radius: 10px;
+                margin: 10px;
+                transition: $transition;
+
+                &:hover {
+                    box-shadow: $box-shadow-hover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 560px) {
+    #project-details {
+        margin: 20px 30px;
+    }
+
+    #images {
+        #images-list {
+            img {
+                width: 110px !important;
+                height: 110px !important;
+            }
+        }
+    }
+
+    #technos {
+        &::after, &::before {
+            width: 60px !important;
+        }
+    }
+}
+
+
