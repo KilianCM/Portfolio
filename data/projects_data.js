@@ -149,6 +149,22 @@ let projectsData = {
             "wrcpredict/4.png",
             "wrcpredict/5.png",
         ]
+    },
+    "battledrive": {
+        "name": "BattleDrive Competition",
+        "subname": "Showcase website for my association",
+        "description": "This project is the official website of my association, BattleDrive Competition. " +
+        "This association has been created to take part at rallies and to find some partners in order to help" + 
+        " us reducing our cost. He shows our partners, our goal and presents the BattleDrive team." +
+        " Big thanks to Martin Rizand Photographie for the main background image and R2S Location for Clio's pictures." + 
+        "<br><br> You can visit this website here : <a id='battle-drive-link' href='www.battledrive.fr'>www.battledrive.fr</a>",
+        "technos": ["Vue.js", "Netlify"],
+        "images": [
+            "battledrive/1.png",
+            "battledrive/2.png",
+            "battledrive/3.png",
+            "battledrive/4.png",
+        ]
     }
 };
 
