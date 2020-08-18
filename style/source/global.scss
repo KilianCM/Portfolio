@@ -71,19 +71,3 @@ section{
     color:$grey-color;
   }
 }
-
-@media(max-width: 552px) {
-  header {
-    justify-content: space-evenly;
-
-    #menu {
-      margin-left: unset;
-
-      li {
-        margin: 0 3vw;
-        padding-right: unset;
-        text-align: center;
-      }
-    }
-  }
-}

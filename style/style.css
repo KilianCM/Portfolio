@@ -67,6 +67,23 @@ section .subtitle {
   color: #7F7F7F;
 }
 
+#menu {
+  list-style: none;
+  display: flex;
+  z-index: 2;
+  margin-left: 13px;
+}
+#menu li {
+  padding-right: 2vw;
+}
+#menu li a {
+  transition: all 0.4s ease;
+  color: #094067;
+}
+#menu li a:hover {
+  color: #52e0c0;
+}
+
 @media (max-width: 552px) {
   header {
     justify-content: space-evenly;
@@ -80,26 +97,6 @@ section .subtitle {
     text-align: center;
   }
 }
-#menu {
-  list-style: none;
-  display: flex;
-  z-index: 2;
-  margin-left: 13px;
-}
-
-#menu li {
-  padding-right: 2vw;
-}
-
-#menu li a {
-  transition: all ease 0.2s;
-  color: #094067;
-}
-
-#menu li a:hover {
-  color: #52e0c0;
-}
-
 #clip-section {
   display: flex;
   flex-direction: column;
@@ -151,6 +148,7 @@ section .subtitle {
 }
 .icon:hover {
   color: #52e0c0;
+  transform: scale(1.1);
 }
 
 #social-networks {
@@ -668,8 +666,7 @@ section .subtitle {
   .timeline .timeline-item:nth-child(even) .timeline-content .date {
     left: 0px;
   }
-}
-@media (max-width: 375px) {
+
   .timeline .timeline-item:nth-child(odd) .timeline-content h2 {
     margin-top: 20px;
   }
@@ -714,20 +711,19 @@ footer .separator {
   background-color: #e4e4e4 !important;
 }
 footer #resume-link {
-  background-color: #025be9;
+  font-size: 1.1rem;
+  background-image: linear-gradient(to right, #025be9, #0b62ef, #1369f4, #1a6ffa, #2076ff);
   padding: 10px;
   border-radius: 8px;
   position: relative;
   top: -35px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
-  transition: all ease-in-out 0.2s;
+  transition: all 0.4s ease;
 }
 footer #resume-link:hover {
-  background-color: white;
+  transform: scale(1.1);
   cursor: pointer;
-}
-footer #resume-link:hover a {
-  color: #025be9;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 footer #resume-link a {
   color: #fffffe;

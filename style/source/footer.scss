@@ -18,22 +18,20 @@ footer{
     }
 
     #resume-link {
-        background-color: $primary-color;
+        font-size: 1.1rem;
+        background-image: $gradient-right;
         padding: 10px;
         border-radius: 8px;
         position: relative;
         top: -35px;
         box-shadow:  $box-shadow;
-        transition: all ease-in-out 0.2s;
+        transition: $transition;
 
 
         &:hover {
-            background-color: white;
+            transform: $transform-scale;
             cursor: pointer;
-
-            a {
-                color: $primary-color;
-            }
+            box-shadow: $box-shadow-hover;
         }
 
         a {

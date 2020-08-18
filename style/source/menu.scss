@@ -3,17 +3,33 @@
   display: flex;
   z-index: 2;
   margin-left: 13px;
+
+  li{
+    padding-right: 2vw;
+
+    a{
+      transition: $transition;
+      color: $title-color;
+
+      &:hover{
+        color: $accent-color;
+      }      
+    }
+  }
 }
 
-#menu li{
-  padding-right: 2vw;
-}
+@media(max-width: 552px) {
+  header {
+    justify-content: space-evenly;
 
-#menu li a{
-  transition: all ease 0.2s;
-  color: $title-color;
-}
+    #menu {
+      margin-left: unset;
 
-#menu li a:hover{
-  color: $accent-color;
+      li {
+        margin: 0 3vw;
+        padding-right: unset;
+        text-align: center;
+      }
+    }
+  }
 }

@@ -162,10 +162,7 @@
     .timeline .timeline-item:nth-child(even) .timeline-content .date {
         left: 0px;
     }
-}
 
-
-@media(max-width: 375px){
     .timeline .timeline-item:nth-child(odd) .timeline-content h2{
         margin-top: 20px;
     }
