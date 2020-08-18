@@ -10,12 +10,18 @@
   #title {
     font-size: 12rem;
     font-weight: bold;
-    /*background: url("clip_bg.jpg");*/
-    background-image: linear-gradient(to top, #00c6fb 0%, $primary-color 100%);
+    background-image: linear-gradient(to top, #00c6fb 40%, $primary-color 100%);
     background-position: -150px;
     background-attachment: fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @-moz-document url-prefix() {
+    #title {
+      background-attachment: unset;
+      background-image: linear-gradient(to top, #00c6fb -20%, $primary-color 100%);
+    }
   }
 
   #subtitle{
@@ -123,11 +129,17 @@
 
 @media(max-width: 552px) {
   #clip-section #title {
-    font-size: 5rem;
+    font-size: 7rem;
   }
 
   #social-networks li{
     margin-right: 10px;
+  }
+}
+
+@media(max-width: 490px) {
+  #clip-section #title {
+    font-size: 5rem;
   }
 }
 

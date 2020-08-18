@@ -154,6 +154,14 @@
             }
         }
     }
+
+    .date {
+        right: 0px;
+    }
+
+    .timeline .timeline-item:nth-child(even) .timeline-content .date {
+        left: 0px;
+    }
 }
 
 

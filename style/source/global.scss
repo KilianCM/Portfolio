@@ -26,7 +26,7 @@ p {
 header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 20px 5vw 20px 5vw;
 }
 
@@ -69,5 +69,21 @@ section{
     font-size: 1rem;
     font-weight: normal;
     color:$grey-color;
+  }
+}
+
+@media(max-width: 552px) {
+  header {
+    justify-content: space-evenly;
+
+    #menu {
+      margin-left: unset;
+
+      li {
+        margin: 0 3vw;
+        padding-right: unset;
+        text-align: center;
+      }
+    }
   }
 }
