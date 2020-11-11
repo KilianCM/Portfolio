@@ -12,6 +12,8 @@ body, html {
 
 body {
   background-color: #fffffe;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -158,6 +160,11 @@ section .subtitle {
   margin-left: 13px;
 }
 
+@media (min-width: 1920px) {
+  #landing-illu {
+    right: 0;
+  }
+}
 @media (max-width: 1750px) {
   #landing-illu {
     max-width: 800px;
@@ -733,6 +740,11 @@ footer #resume-link a {
   font-size: 0.5em;
 }
 
+@media (min-width: 1920px) {
+  footer {
+    border-radius: 15px;
+  }
+}
 @media (max-width: 580px) {
   footer .separator {
     width: 300px;

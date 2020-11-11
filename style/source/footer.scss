@@ -44,6 +44,12 @@ footer{
     font-size: 0.5em;
 }
 
+@media(min-width: 1920px){
+    footer {
+      border-radius: 15px;
+    }
+  }
+
 @media(max-width: 580px) {
     footer {
         .separator {
