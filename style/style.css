@@ -37,7 +37,7 @@ a {
 }
 
 .discret-links {
-  color: #7F7F7F;
+  color: #656565;
   transition: all ease-in-out 0.2s;
 }
 .discret-links:hover {
@@ -66,7 +66,7 @@ section .title::before {
 section .subtitle {
   font-size: 1rem;
   font-weight: normal;
-  color: #7F7F7F;
+  color: #656565;
 }
 
 #menu {
@@ -384,6 +384,7 @@ section .subtitle {
 }
 #project-details #project-subname {
   font-style: italic;
+  font-size: 16px;
 }
 #project-details #project-description {
   margin-top: 15px;
@@ -612,7 +613,7 @@ section .subtitle {
   margin-bottom: 8px;
 }
 .timeline-content h3 {
-  color: #7F7F7F;
+  color: #656565;
   font-size: 1rem;
   font-weight: normal;
   padding: 5px 2px 5px 0px;
